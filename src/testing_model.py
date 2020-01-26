@@ -27,8 +27,12 @@ def test(df):
 
     predictions = lm.predict(x_test)
 
-    for x in range(len(predictions)):
-        print(f'Predictions: {predictions[x]}\nInput Data: {x_test[x]}\nActual Value: {y_test[x]}')
+    prediction_table = {
+        'Predicted Salary': predictions,
+        'Actual Value': y_test
+    }
+
+    return pd.DataFrame(prediction_table)
 
 
 def scatterplot(df, comparer):
