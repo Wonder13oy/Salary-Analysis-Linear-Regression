@@ -45,6 +45,6 @@ def scatterplot(df, comparer):
 def histplot(df, comparer):
 
     style.use('ggplot')
-    plt.hist(df['salary'])
+    plt.hist(df[comparer])
     plt.xlabel(comparer)
     plt.show()
